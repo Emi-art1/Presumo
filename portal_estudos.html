@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resumos ADM</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,900&family=DM+Sans:wght@400;600;700&family=Press+Start+2P&display=swap');
+:root{--bg:#08090e;--s1:#0e1118;--s2:#141720;--s3:#1c2130;--bd:#1e2535;--bd2:#2e3a55;--txt:#e8eaf2;--muted:#5a6480;--dim:#3a4260;--mkt:#a78bfa;--fin:#34d399;--ops:#fbbf24;--com:#60a5fa;--inov:#f472b6;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"DM Sans",sans-serif;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.px{font-family:"Press Start 2P",monospace}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:3px}
+nav{position:sticky;top:0;z-index:100;background:#08090ef5;border-bottom:1px solid var(--bd);backdrop-filter:blur(16px)}
+.ni{display:flex;align-items:center;justify-content:space-between;padding:13px 24px;max-width:1100px;margin:0 auto;gap:12px;flex-wrap:wrap}
+.nl{display:flex;gap:5px;flex-wrap:wrap}
+.nl a{font-size:12px;font-weight:600;color:var(--muted);padding:6px 13px;border-radius:50px;border:1px solid transparent;text-decoration:none;transition:all .2s;white-space:nowrap}
+.nl a:hover{color:var(--txt);border-color:var(--bd2)}
+.hero{padding:78px 24px 64px;text-align:center;background:radial-gradient(ellipse 100% 80% at 50% 0%,#0d1a3a,transparent 70%)}
+.hbadge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);border:1px solid var(--bd2);padding:6px 18px;border-radius:50px;margin-bottom:22px}
+.hero h1{font-family:"Fraunces",serif;font-weight:900;font-style:italic;font-size:clamp(32px,6vw,64px);line-height:1.1;margin-bottom:16px}
+.hero h1 em{color:#60a5fa;font-style:normal}
+.hero p{font-size:clamp(14px,1.8vw,17px);color:var(--muted);max-width:480px;margin:0 auto 32px;font-weight:500}
+.pills{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+.pill{display:flex;align-items:center;gap:8px;background:var(--s2);border:1px solid var(--bd);border-radius:50px;padding:7px 16px;font-size:13px;font-weight:600}
+.pd{width:8px;height:8px;border-radius:50%}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.subj{padding:60px 0;border-top:1px solid var(--bd);scroll-margin-top:68px}
+.eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:9px}
+.stitle{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(22px,3.5vw,34px);line-height:1.2;margin-bottom:9px}
+.slead{font-size:14px;color:var(--muted);max-width:600px;margin-bottom:28px}
+.wks{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:26px}
+.wk{flex:1;min-width:90px;background:var(--s2);border:1px solid var(--bd);border-radius:8px;padding:9px 12px;font-size:11px;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:8px}
+.wd{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(275px,1fr));gap:12px;margin-bottom:22px}
+.card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:18px;transition:transform .2s}
+.card:hover{transform:translateY(-3px)}
+.ctop{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.cico{font-size:20px;flex-shrink:0}
+.clbl{font-size:13px;font-weight:700}
+.cbody{font-size:13px;color:var(--muted);line-height:1.75}
+.cbody strong{color:var(--txt);font-weight:600}
+.kwbar{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:15px 18px;display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.kwlbl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim);white-space:nowrap;padding-top:2px}
+.kwlist{display:flex;gap:6px;flex-wrap:wrap}
+.kw{font-size:12px;font-weight:600;padding:3px 11px;border-radius:50px;border:1px solid var(--bd2);color:var(--muted);background:var(--s3)}
+footer{padding:40px 24px;border-top:1px solid var(--bd);text-align:center}
+footer p{font-size:13px;color:var(--muted);margin-top:7px}
+@media(max-width:640px){.nl{display:none}.grid{grid-template-columns:1fr}.wks{flex-direction:column}}
+@keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{animation:fu .5s ease both .1s}.hero p{animation:fu .5s ease both .2s}.pills{animation:fu .5s ease both .3s}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="ni">
+    <span class="px" style="font-size:9px">📚 PORTAL ADM</span>
+    <div class="nl">
+      <a href="#mkt"  style="color:var(--mkt)">🎯 Marketing</a>
+      <a href="#fin"  style="color:var(--fin)">💰 Financeira</a>
+      <a href="#ops"  style="color:var(--ops)">🏭 Operações</a>
+      <a href="#com"  style="color:var(--com)">💬 Comunicação</a>
+      <a href="#inov" style="color:var(--inov)">🚀 Inovação</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hbadge">Técnico em Administração · Educação Profissional Paulista</div>
+  <h1>Estudar ficou<br><em>muito mais fácil</em></h1>
+  <p>Resumos objetivos de todas as 5 disciplinas — tudo que você precisa saber para se dar bem nas provas!</p>
+  <div class="pills">
+    <div class="pill"><div class="pd" style="background:var(--mkt)"></div>Marketing Estratégico</div>
+    <div class="pill"><div class="pd" style="background:var(--fin)"></div>Gestão Financeira</div>
+    <div class="pill"><div class="pd" style="background:var(--ops)"></div>Gestão de Operações</div>
+    <div class="pill"><div class="pd" style="background:var(--com)"></div>Comunicação Empresarial</div>
+    <div class="pill"><div class="pd" style="background:var(--inov)"></div>Inovação e Negócios</div>
+  </div>
+  <p style="font-size:11px;color:var(--dim);letter-spacing:1px;margin:0">↓ Role para estudar</p>
+</section>
+
+<!-- MARKETING -->
+<section class="subj" id="mkt"><div class="wrap">
+  <div class="eyebrow" style="color:var(--mkt)">🎯 Disciplina 1</div>
+  <h2 class="stitle">Marketing Estratégico</h2>
+  <p class="slead">Do conceito de marketing ao posicionamento competitivo — como empresas conquistam e mantêm clientes.</p>
+  <div class="wks">
+    <div class="wk"><div class="wd" style="background:var(--mkt)"></div>Sem.1 — Conceitos</div>
+    <div class="wk"><div class="wd" style="background:var(--mkt)"></div>Sem.2 — Ambientes</div>
+    <div class="wk"><div class="wd" style="background:var(--mkt)"></div>Sem.3 — Consumidor</div>
+    <div class="wk"><div class="wd" style="background:var(--mkt)"></div>Sem.4 — Estratégias</div>
+    <div class="wk"><div class="wd" style="background:var(--mkt)"></div>Sem.5 — Posicionamento</div>
+  </div>
+  <div class="grid">
+    <div class="card" style="border-color:#2a1e4a"><div class="ctop"><span class="cico">💡</span><span class="clbl" style="color:var(--mkt)">O que é Marketing?</span></div><div class="cbody">Processo de <strong>criar, comunicar, entregar e trocar ofertas</strong> que geram valor. Vai além de vender — é construir relacionamentos duradouros com clientes e a sociedade.</div></div>
+    <div class="card" style="border-color:#2a1e4a"><div class="ctop"><span class="cico">🎨</span><span class="clbl" style="color:var(--mkt)">Tipos de Marketing</span></div><div class="cbody"><strong>Tradicional</strong> (TV, rádio) · <strong>Digital</strong> (SEO, Google Ads) · <strong>Conteúdo</strong> (blogs, podcasts) · <strong>Influência</strong> (influenciadores) · <strong>Guerrilha</strong> (ações criativas de baixo custo).</div></div>
+    <div class="card" style="border-color:#2a1e4a"><div class="ctop"><span class="cico">🔑</span><span class="clbl" style="color:var(--mkt)">Os 8 Ps do Marketing</span></div><div class="cbody">4 Ps clássicos: <strong>Produto, Preço, Praça, Promoção</strong>. 4 modernos: <strong>Performance, Processos, Pessoas, Posicionamento</strong>. Juntos = Mix de Marketing.</div></div>
+    <div class="card" style="border-color:#2a1e4a"><div class="ctop"><span class="cico">🌍</span><span class="clbl" style="color:var(--mkt)">Matriz PESTEL</span></div><div class="cbody">Analisa o <strong>macroambiente</strong>: <strong>P</strong>olítico · <strong>E</strong>conômico · <strong>S</strong>ocial · <strong>T</strong>ecnológico · <strong>E</strong>cológico · <strong>L</strong>egal. Identifica oportunidades e ameaças externas.</div></div>
+    <div class="card" style="border-color:#2a1e4a"><div class="ctop"><span class="cico">🏙️</span><span class="clbl" style="color:var(--mkt)">Microambiente</span></div><div class="cbody">Agentes próximos: <strong>fornecedores, clientes, concorrentes, intermediários e públicos</strong>. Diferente do macro — aqui a empresa tem mais poder de influência.</div></div>
+    <div class="card" style="border-color:#2a1e4a"><div class="ctop"><span class="cico">⚡</span><span class="clbl" style="color:var(--mkt)">Análise SWOT</span></div><div class="cbody"><strong>Forças e Fraquezas</strong> = internas. <strong>Oportunidades e Ameaças</strong> = externas. Estratégias: <strong>SO</strong> (crescer), <strong>WO</strong> (desenvolver), <strong>ST</strong> (defender), <strong>WT</strong> (sobreviver).</div></div>
+    <div class="card" style="border-color:#2a1e4a"><div class="ctop"><span class="cico">🧠</span><span class="clbl" style="color:var(--mkt)">Comportamento do Consumidor</span></div><div class="cbody">5 etapas: <strong>Reconhecimento → Busca → Avaliação → Compra → Pós-compra</strong>. Influenciado por fatores pessoais, psicológicos, sociais e culturais.</div></div>
+    <div class="card" style="border-color:#2a1e4a"><div class="ctop"><span class="cico">🎯</span><span class="clbl" style="color:var(--mkt)">Segmentação de Mercado</span></div><div class="cbody"><strong>Geográfica</strong> (localização) · <strong>Demográfica</strong> (idade, renda) · <strong>Psicográfica</strong> (estilo de vida) · <strong>Comportamental</strong> (uso, fidelidade). Base para definir o público-alvo.</div></div>
+    <div class="card" style="border-color:#2a1e4a"><div class="ctop"><span class="cico">🏆</span><span class="clbl" style="color:var(--mkt)">Posicionamento e Vantagem Competitiva</span></div><div class="cbody">Posicionamento = lugar que a marca ocupa na <strong>mente do consumidor</strong>. Porter: <strong>Liderança em Custo</strong>, <strong>Diferenciação</strong> ou <strong>Foco</strong>. Escolha uma e execute bem!</div></div>
+  </div>
+  <div class="kwbar"><span class="kwlbl">Palavras-chave</span><div class="kwlist"><span class="kw">Mix de Marketing</span><span class="kw">PESTEL</span><span class="kw">SWOT</span><span class="kw">Segmentação</span><span class="kw">Posicionamento</span><span class="kw">Jornada do Consumidor</span><span class="kw">Benchmarking</span></div></div>
+</div></section>
+
+<!-- FINANCEIRA -->
+<section class="subj" id="fin"><div class="wrap">
+  <div class="eyebrow" style="color:var(--fin)">💰 Disciplina 2</div>
+  <h2 class="stitle">Gestão Financeira e Contabilidade</h2>
+  <p class="slead">Da função da contabilidade ao Balanço Patrimonial e análise da saúde financeira — base para entender qualquer empresa.</p>
+  <div class="wks">
+    <div class="wk"><div class="wd" style="background:var(--fin)"></div>Sem.1 — Conceitos</div>
+    <div class="wk"><div class="wd" style="background:var(--fin)"></div>Sem.2 — Princípios GAAP</div>
+    <div class="wk"><div class="wd" style="background:var(--fin)"></div>Sem.3 — Estrutura do BP</div>
+    <div class="wk"><div class="wd" style="background:var(--fin)"></div>Sem.4 — Elaboração do BP</div>
+    <div class="wk"><div class="wd" style="background:var(--fin)"></div>Sem.5 — Saúde Financeira</div>
+  </div>
+  <div class="grid">
+    <div class="card" style="border-color:#0d2e1e"><div class="ctop"><span class="cico">📚</span><span class="clbl" style="color:var(--fin)">O que é Contabilidade?</span></div><div class="cbody">Ciência que <strong>registra, controla e interpreta</strong> os eventos econômicos. É o "diário financeiro" da empresa — essencial para toda decisão de gestão.</div></div>
+    <div class="card" style="border-color:#0d2e1e"><div class="ctop"><span class="cico">📏</span><span class="clbl" style="color:var(--fin)">Princípios Contábeis (GAAP)</span></div><div class="cbody"><strong>Continuidade</strong> · <strong>Entidade</strong> (finanças separadas do dono — NUNCA misture!) · <strong>Custo</strong> (registra pelo valor pago) · <strong>Competência</strong> (quando ocorre) · <strong>Prudência</strong> (reconhece perdas cedo).</div></div>
+    <div class="card" style="border-color:#0d2e1e"><div class="ctop"><span class="cico">💎</span><span class="clbl" style="color:var(--fin)">Ativos</span></div><div class="cbody">Tudo que a empresa <strong>possui e controla</strong>. <strong>Circulante</strong>: vira dinheiro em até 12 meses (caixa, estoque, clientes). <strong>Não Circulante</strong>: imóveis, máquinas, equipamentos, intangíveis.</div></div>
+    <div class="card" style="border-color:#0d2e1e"><div class="ctop"><span class="cico">💳</span><span class="clbl" style="color:var(--fin)">Passivos</span></div><div class="cbody">O que a empresa <strong>deve a terceiros</strong>. <strong>Circulante</strong>: vence em até 12 meses (contas, salários, impostos). <strong>Não Circulante</strong>: empréstimos e financiamentos de longo prazo.</div></div>
+    <div class="card" style="border-color:#0d2e1e"><div class="ctop"><span class="cico">💚</span><span class="clbl" style="color:var(--fin)">Patrimônio Líquido</span></div><div class="cbody"><strong>PL = Ativo Total − Passivo Total</strong>. O valor que pertence aos sócios. Capital Social + Lucros acumulados. <strong>PL negativo = a empresa deve mais do que tem — situação crítica!</strong></div></div>
+    <div class="card" style="border-color:#0d2e1e"><div class="ctop"><span class="cico">✍️</span><span class="clbl" style="color:var(--fin)">Partidas Dobradas</span></div><div class="cbody">Todo lançamento tem <strong>débito E crédito de igual valor</strong>. Garante equilíbrio. Ex: comprou mercadoria à vista → Débito em Estoque + Crédito em Caixa.</div></div>
+    <div class="card" style="border-color:#0d2e1e"><div class="ctop"><span class="cico">🔍</span><span class="clbl" style="color:var(--fin)">Balancete de Verificação</span></div><div class="cbody">Lista todos os saldos das contas para verificar se <strong>Total Débito = Total Crédito</strong>. É a checagem antes de fechar o Balanço final — identifica erros cedo.</div></div>
+    <div class="card" style="border-color:#0d2e1e"><div class="ctop"><span class="cico">💧</span><span class="clbl" style="color:var(--fin)">Índices de Liquidez</span></div><div class="cbody"><strong>Liquidez Corrente</strong> = Ativo Circ. ÷ Passivo Circ. Acima de 1 = saudável. Abaixo de 0,5 = problema sério! <strong>Solvência Geral</strong> = Ativo Total ÷ Passivo Total. Acima de 1 = paga tudo.</div></div>
+    <div class="card" style="border-color:#0d2e1e"><div class="ctop"><span class="cico">📊</span><span class="clbl" style="color:var(--fin)">Análise do Balanço</span></div><div class="cbody"><strong>Vertical</strong>: % de cada conta sobre o total. <strong>Horizontal</strong>: comparação entre períodos (evolução). <strong>Grau de Endividamento</strong> = Passivo ÷ Ativo. Quanto menor, mais saudável.</div></div>
+  </div>
+  <div class="kwbar"><span class="kwlbl">Palavras-chave</span><div class="kwlist"><span class="kw">Ativo/Passivo/PL</span><span class="kw">Partidas Dobradas</span><span class="kw">Liquidez Corrente</span><span class="kw">GAAP</span><span class="kw">Balancete</span><span class="kw">Solvência</span><span class="kw">Endividamento</span><span class="kw">DRE</span></div></div>
+</div></section>
+
+<!-- OPERAÇÕES -->
+<section class="subj" id="ops"><div class="wrap">
+  <div class="eyebrow" style="color:var(--ops)">🏭 Disciplina 3</div>
+  <h2 class="stitle">Gestão de Operações</h2>
+  <p class="slead">Dos processos produtivos ao controle da produção — como as empresas fabricam, entregam serviços e buscam melhoria contínua.</p>
+  <div class="wks">
+    <div class="wk"><div class="wd" style="background:var(--ops)"></div>Sem.1 — Processos</div>
+    <div class="wk"><div class="wd" style="background:var(--ops)"></div>Sem.2 — Serviços</div>
+    <div class="wk"><div class="wd" style="background:var(--ops)"></div>Sem.3 — PCP</div>
+    <div class="wk"><div class="wd" style="background:var(--ops)"></div>Sem.4 — Controle</div>
+    <div class="wk"><div class="wd" style="background:var(--ops)"></div>Sem.5 — Lean/PDCA</div>
+  </div>
+  <div class="grid">
+    <div class="card" style="border-color:#2a1c08"><div class="ctop"><span class="cico">🔄</span><span class="clbl" style="color:var(--ops)">Revoluções Industriais</span></div><div class="cbody"><strong>1ª</strong>: máquina a vapor. <strong>2ª</strong>: eletricidade + linha de montagem Ford. <strong>3ª</strong>: informática e automação. <strong>4ª</strong> (Indústria 4.0): IoT, IA, fábricas inteligentes.</div></div>
+    <div class="card" style="border-color:#2a1c08"><div class="ctop"><span class="cico">➡️</span><span class="clbl" style="color:var(--ops)">Produção Empurrada vs. Puxada</span></div><div class="cbody"><strong>Empurrada</strong>: produz por previsão, cria estoque (Fordismo). <strong>Puxada</strong>: produz só com demanda real (Just-in-Time Toyota/Lean). Lean = eliminar tudo que não agrega valor.</div></div>
+    <div class="card" style="border-color:#2a1c08"><div class="ctop"><span class="cico">🛎️</span><span class="clbl" style="color:var(--ops)">Características dos Serviços</span></div><div class="cbody"><strong>Intangibilidade</strong> (sem forma física) · <strong>Inseparabilidade</strong> (produção e consumo simultâneos) · <strong>Heterogeneidade</strong> (varia) · <strong>Perecibilidade</strong> (não estoca — capacidade ociosa é perda definitiva).</div></div>
+    <div class="card" style="border-color:#2a1c08"><div class="ctop"><span class="cico">📋</span><span class="clbl" style="color:var(--ops)">PCP e ERP</span></div><div class="cbody"><strong>PCP</strong>: define o que, quanto e quando produzir. <strong>ERP</strong>: integra produção, vendas, financeiro e RH em tempo real — elimina retrabalho e agiliza decisões da empresa inteira.</div></div>
+    <div class="card" style="border-color:#2a1c08"><div class="ctop"><span class="cico">🚧</span><span class="clbl" style="color:var(--ops)">Gargalo e Takt Time</span></div><div class="cbody"><strong>Gargalo</strong>: etapa mais lenta — limita toda a produção. Eliminar o gargalo é o que realmente aumenta a capacidade. <strong>Takt Time</strong> = Tempo disponível ÷ Demanda. O ritmo ideal!</div></div>
+    <div class="card" style="border-color:#2a1c08"><div class="ctop"><span class="cico">🗺️</span><span class="clbl" style="color:var(--ops)">Modelo SIPOC</span></div><div class="cbody">Mapeamento de ponta a ponta: <strong>S</strong>uppliers · <strong>I</strong>nputs · <strong>P</strong>rocess · <strong>O</strong>utputs · <strong>C</strong>ustomers. Revela desperdícios e problemas invisíveis no dia a dia da operação.</div></div>
+    <div class="card" style="border-color:#2a1c08"><div class="ctop"><span class="cico">♻️</span><span class="clbl" style="color:var(--ops)">Os 7 Desperdícios do Lean</span></div><div class="cbody"><strong>Superprodução</strong> (o pior!) · <strong>Espera</strong> · <strong>Transporte</strong> · <strong>Processamento excessivo</strong> · <strong>Estoque</strong> · <strong>Movimentação</strong> · <strong>Defeitos</strong>. +8º: talento humano não utilizado.</div></div>
+    <div class="card" style="border-color:#2a1c08"><div class="ctop"><span class="cico">📊</span><span class="clbl" style="color:var(--ops)">Indicadores de Produção</span></div><div class="cbody"><strong>OEE</strong> = Disponibilidade × Desempenho × Qualidade (meta &gt;85%). <strong>Lead Time</strong>: tempo do pedido à entrega. <strong>OTD</strong>: % de pedidos no prazo. <strong>NPS</strong>: satisfação do cliente.</div></div>
+    <div class="card" style="border-color:#2a1c08"><div class="ctop"><span class="cico">🔁</span><span class="clbl" style="color:var(--ops)">Ciclo PDCA e Kaizen</span></div><div class="cbody"><strong>Plan → Do → Check → Act</strong>. Ciclo infinito de melhoria contínua. <strong>Kaizen</strong>: pequenas melhorias feitas por todos, todo dia — geram resultados extraordinários ao longo do tempo!</div></div>
+  </div>
+  <div class="kwbar"><span class="kwlbl">Palavras-chave</span><div class="kwlist"><span class="kw">Just-in-Time</span><span class="kw">Lean</span><span class="kw">SIPOC</span><span class="kw">OEE</span><span class="kw">Gargalo</span><span class="kw">PDCA</span><span class="kw">Takt Time</span><span class="kw">Kaizen</span><span class="kw">Indústria 4.0</span></div></div>
+</div></section>
+
+<!-- COMUNICAÇÃO -->
+<section class="subj" id="com"><div class="wrap">
+  <div class="eyebrow" style="color:var(--com)">💬 Disciplina 4</div>
+  <h2 class="stitle">Comunicação Empresarial</h2>
+  <p class="slead">Do processo de comunicação à assertividade — habilidades essenciais para se comunicar bem em qualquer ambiente profissional.</p>
+  <div class="wks">
+    <div class="wk"><div class="wd" style="background:var(--com)"></div>Sem.1 — Conceitos</div>
+    <div class="wk"><div class="wd" style="background:var(--com)"></div>Sem.2 — Fluxos</div>
+    <div class="wk"><div class="wd" style="background:var(--com)"></div>Sem.3 — Democratização</div>
+    <div class="wk"><div class="wd" style="background:var(--com)"></div>Sem.4 — Não Verbal</div>
+    <div class="wk"><div class="wd" style="background:var(--com)"></div>Sem.5 — Assertividade</div>
+  </div>
+  <div class="grid">
+    <div class="card" style="border-color:#0d1e38"><div class="ctop"><span class="cico">📡</span><span class="clbl" style="color:var(--com)">Processo de Comunicação</span></div><div class="cbody"><strong>Emissor → Mensagem → Canal → Receptor → Feedback</strong>. O <strong>ruído</strong> é qualquer interferência que distorce a mensagem — físico (barulho), semântico (palavra ambígua) ou psicológico (emoções).</div></div>
+    <div class="card" style="border-color:#0d1e38"><div class="ctop"><span class="cico">🎭</span><span class="clbl" style="color:var(--com)">3 Tipos de Comunicação</span></div><div class="cbody"><strong>Passiva</strong>: evita conflitos, acumula ressentimentos. <strong>Agressiva</strong>: impõe sem ouvir, danifica relacionamentos. <strong>Assertiva</strong>: clareza e firmeza com respeito — a mais indicada profissionalmente!</div></div>
+    <div class="card" style="border-color:#0d1e38"><div class="ctop"><span class="cico">↕️</span><span class="clbl" style="color:var(--com)">Fluxos de Comunicação</span></div><div class="cbody"><strong>Descendente</strong>: chefia→funcionários (metas, instruções). <strong>Ascendente</strong>: funcionários→chefia (relatórios, sugestões). <strong>Lateral</strong>: entre áreas do mesmo nível. <strong>Informal</strong>: fora dos canais oficiais.</div></div>
+    <div class="card" style="border-color:#0d1e38"><div class="ctop"><span class="cico">☕</span><span class="clbl" style="color:var(--com)">Comunicação Informal</span></div><div class="cbody">Conversas, grupos de app, "rádio corredor". Positivo: velocidade e integração. Negativo: boatos. <strong>O vácuo de informação sempre é preenchido por boatos</strong> — comunicação oficial clara e frequente é a solução!</div></div>
+    <div class="card" style="border-color:#0d1e38"><div class="ctop"><span class="cico">🌐</span><span class="clbl" style="color:var(--com)">Democratização da Informação</span></div><div class="cbody">Garantir acesso <strong>igualitário</strong> à informação. Barreiras: econômica, infraestrutura, baixa escolaridade, idioma. Ferramentas: cursos online gratuitos, código aberto, redes sociais, intranets corporativas.</div></div>
+    <div class="card" style="border-color:#0d1e38"><div class="ctop"><span class="cico">🤲</span><span class="clbl" style="color:var(--com)">Comunicação Não Verbal</span></div><div class="cbody">Postura, gestos, expressões e tom de voz. <strong>Quando fala e corpo se contradizem, as pessoas acreditam no corpo!</strong> Erros: celular em reunião, braços cruzados, evitar contato visual.</div></div>
+    <div class="card" style="border-color:#0d1e38"><div class="ctop"><span class="cico">💪</span><span class="clbl" style="color:var(--com)">Princípios da Assertividade</span></div><div class="cbody">6 princípios: <strong>Respeito</strong> · <strong>Honestidade</strong> · <strong>Escuta ativa</strong> (sem interromper) · <strong>Clareza</strong> (simples e direto) · <strong>Empatia</strong> (lugar do outro) · <strong>Objetividade</strong> (vai ao ponto).</div></div>
+    <div class="card" style="border-color:#0d1e38"><div class="ctop"><span class="cico">🛠️</span><span class="clbl" style="color:var(--com)">Técnicas Assertivas</span></div><div class="cbody"><strong>Linguagem "eu"</strong>: "Eu sinto que..." em vez de "Você sempre...". <strong>Foque em fatos</strong>: comportamento, não rótulo. <strong>Disco arranhado</strong>: repita sua posição com calma sob pressão.</div></div>
+    <div class="card" style="border-color:#0d1e38"><div class="ctop"><span class="cico">⚠️</span><span class="clbl" style="color:var(--com)">Falhas na Comunicação</span></div><div class="cbody">Erros que sabotam a assertividade: <strong>generalizar</strong> ("você sempre..."), <strong>criticar a pessoa</strong> (e não o comportamento), <strong>acumular para explodir</strong>, tom inadequado e ceder por pressão emocional.</div></div>
+  </div>
+  <div class="kwbar"><span class="kwlbl">Palavras-chave</span><div class="kwlist"><span class="kw">Ruído</span><span class="kw">Feedback</span><span class="kw">Assertividade</span><span class="kw">Fluxos Formais</span><span class="kw">Rádio Corredor</span><span class="kw">Não Verbal</span><span class="kw">Linguagem "eu"</span><span class="kw">Escuta Ativa</span></div></div>
+</div></section>
+
+<!-- INOVAÇÃO -->
+<section class="subj" id="inov"><div class="wrap">
+  <div class="eyebrow" style="color:var(--inov)">🚀 Disciplina 5</div>
+  <h2 class="stitle">Inovação e Desenvolvimento de Negócios</h2>
+  <p class="slead">Da definição de inovação ao plano de negócios — como identificar oportunidades, empreender e crescer de forma sustentável.</p>
+  <div class="wks">
+    <div class="wk"><div class="wd" style="background:var(--inov)"></div>Sem.1 — Conceitos</div>
+    <div class="wk"><div class="wd" style="background:var(--inov)"></div>Sem.2 — Disruptiva vs Incremental</div>
+    <div class="wk"><div class="wd" style="background:var(--inov)"></div>Sem.3 — Casos Reais</div>
+    <div class="wk"><div class="wd" style="background:var(--inov)"></div>Sem.4 — Empreendedorismo</div>
+    <div class="wk"><div class="wd" style="background:var(--inov)"></div>Sem.5 — Plano ao Crescimento</div>
+  </div>
+  <div class="grid">
+    <div class="card" style="border-color:#2a0e20"><div class="ctop"><span class="cico">💡</span><span class="clbl" style="color:var(--inov)">Invenção vs. Inovação</span></div><div class="cbody"><strong>Invenção</strong>: criar algo novo. <strong>Inovação</strong>: aplicar na prática e gerar valor. Edison inventou a lâmpada — a distribuição de eletricidade foi a inovação que a tornou útil a todos.</div></div>
+    <div class="card" style="border-color:#2a0e20"><div class="ctop"><span class="cico">🏷️</span><span class="clbl" style="color:var(--inov)">Tipos de Inovação</span></div><div class="cbody"><strong>De produto</strong> (novo produto ou melhoria) · <strong>De processo</strong> (novo método produtivo) · <strong>Organizacional</strong> (nova forma de gestão) · <strong>De modelo de negócio</strong> (nova forma de criar e entregar valor).</div></div>
+    <div class="card" style="border-color:#2a0e20"><div class="ctop"><span class="cico">💥</span><span class="clbl" style="color:var(--inov)">Inovação Disruptiva</span></div><div class="cbody">Transforma ou substitui o que existia, com vantagem em <strong>simplicidade, conveniência, acessibilidade ou custo</strong>. Exemplos: Netflix (locadoras), Uber (táxis), Airbnb (hotéis), bancos digitais.</div></div>
+    <div class="card" style="border-color:#2a0e20"><div class="ctop"><span class="cico">📈</span><span class="clbl" style="color:var(--inov)">Inovação Incremental</span></div><div class="cbody">Melhorias <strong>contínuas e graduais</strong> em produtos ou serviços existentes. A mais comum e menos arriscada! Ex: cada nova geração de smartphone. Não muda o modelo de negócio — melhora o que já existe.</div></div>
+    <div class="card" style="border-color:#2a0e20"><div class="ctop"><span class="cico">🔄</span><span class="clbl" style="color:var(--inov)">Ciclo de Vida da Inovação</span></div><div class="cbody"><strong>Formação</strong> (P&D, alto investimento) → <strong>Crescimento</strong> (vendas sobem) → <strong>Maturidade</strong> (pico, foco em eficiência) → <strong>Declínio</strong> (perde relevância). Ex: BlackBerry em 2016.</div></div>
+    <div class="card" style="border-color:#2a0e20"><div class="ctop"><span class="cico">🦁</span><span class="clbl" style="color:var(--inov)">Tipos de Empreendedor</span></div><div class="cbody"><strong>Por necessidade</strong> (informal) · <strong>Cooperado</strong> · <strong>MEI</strong> · <strong>Franqueado</strong> · <strong>Social</strong> (impacto humanitário) · <strong>Corporativo/Intraempreendedor</strong> (inova dentro da empresa) · <strong>Público</strong>.</div></div>
+    <div class="card" style="border-color:#2a0e20"><div class="ctop"><span class="cico">💪</span><span class="clbl" style="color:var(--inov)">Perfil do Empreendedor</span></div><div class="cbody"><strong>Iniciativa</strong> (age sem esperar) · <strong>Resiliência</strong> (aprende com fracassos) · <strong>Visão</strong> (enxerga oportunidades onde outros veem riscos) · <strong>Mentalidade de crescimento</strong>: habilidades se desenvolvem com esforço!</div></div>
+    <div class="card" style="border-color:#2a0e20"><div class="ctop"><span class="cico">🧠</span><span class="clbl" style="color:var(--inov)">Técnicas de Ideação</span></div><div class="cbody"><strong>Brainstorming</strong>: gera ideias sem criticar (primeiro gera, depois filtra!). <strong>SCAMPER</strong>: Substituir, Combinar, Adaptar, Modificar, Propor outro uso, Eliminar, Reorganizar. <strong>Brainwriting</strong>: escreve e passa.</div></div>
+    <div class="card" style="border-color:#2a0e20"><div class="ctop"><span class="cico">📋</span><span class="clbl" style="color:var(--inov)">Validação e Plano de Negócios</span></div><div class="cbody">Ordem certa: <strong>Gerar ideia → Validar com clientes → Plano de negócios → Implementar</strong>. <strong>Nunca invista sem validar!</strong> O Plano de Negócios descreve o que faz, para quem e como ganhará dinheiro.</div></div>
+  </div>
+  <div class="kwbar"><span class="kwlbl">Palavras-chave</span><div class="kwlist"><span class="kw">Disruptiva vs Incremental</span><span class="kw">Ciclo de Vida</span><span class="kw">SCAMPER</span><span class="kw">Brainstorming</span><span class="kw">Plano de Negócios</span><span class="kw">Validação</span><span class="kw">Intraempreendedor</span></div></div>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div class="px" style="font-size:9px;color:#3a4260">📚 PORTAL DE ESTUDOS ADM</div>
+    <p>Conteúdo baseado no material do Técnico em Administração · Educação Profissional Paulista</p>
+  </div>
+</footer>
+
+</body>
+</html>
